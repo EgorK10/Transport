@@ -13,21 +13,29 @@ namespace transport.Types
 
         private readonly Dictionary<int, string> _imageBicycle = new()
         {
-            { 1, "" },
-            { 2, "" },
-            { 3, "" },
+            { 1, "\\Pictures\\Rock.jpg" },
+            { 2, "\\Pictures\\City.jpg" },
+            { 3, "\\Pictures\\Childe.jpg" },
         };
 
         private readonly byte _wheelRadius;
 
         private readonly string? _type;
 
-        public Bicycle(int type, byte wheelRadius)
+        public Bicycle(byte countWheels, int type, byte wheelRadius)
         {
+            _countWheels = countWheels;
             _type = _typeBicycle[type];
             _wheelRadius = wheelRadius;
 
             _image = _imageBicycle[type];
+        }
+
+        public override string Info()
+        {
+            return $"Количество колёс: {_countWheels}\n" +
+                   $"Радиус колес: {_wheelRadius}\n" +
+                   $"Тип: {_type}";
         }
     }
 }

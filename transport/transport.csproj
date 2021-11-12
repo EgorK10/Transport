@@ -8,7 +8,55 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pictures\" />
+    <None Remove="1614525788_57-p-strelka-na-belom-fone-63.png" />
+    <None Remove="Pictures\Bus.jpg" />
+    <None Remove="Pictures\Car.jpg" />
+    <None Remove="Pictures\Childe.jpg" />
+    <None Remove="Pictures\City.jpg" />
+    <None Remove="Pictures\Dirt.jpg" />
+    <None Remove="Pictures\Height.jpg" />
+    <None Remove="Pictures\Porsh.jpg" />
+    <None Remove="Pictures\Rock.jpg" />
+    <None Remove="Pictures\Roket.jpg" />
+    <None Remove="Pictures\SkyReact.jpg" />
+    <None Remove="Pictures\TurboVent.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="1614525788_57-p-strelka-na-belom-fone-63.png" />
+    <Resource Include="Pictures\Bus.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Car.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Childe.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\City.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Dirt.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Height.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Porsh.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Rock.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Roket.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\SkyReact.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\TurboVent.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

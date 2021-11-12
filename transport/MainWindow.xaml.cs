@@ -54,24 +54,25 @@ namespace transport
             bicyclesCount = 0;
             airplanesCount = 0;
 
-            for (var i = 0; i < 10; ++i)
+            var random = new Random();
+            int count = random.Next() % 10 + 5;
+            for (var i = 0; i < count; i++)
             {
-                var random = new Random();
 
                 switch (random.Next() % 3)
                 {
                     case 0:
-                        vehiclesList.Add(new Car(1, 2.5f, 4));
+                        vehiclesList.Add(new Car(4, (byte)(random.Next() % 4 + 1), (float)random.Next() % 150 / 10, (byte)(random.Next() % 3 + 2)));
                         namesVehiclesList.Add("Машина");
                         carsCount++;
                         break;
                     case 1:
-                        vehiclesList.Add(new Bicycle(2, 27));
+                        vehiclesList.Add(new Bicycle(2, (byte)(random.Next() % 3 + 1), (byte)(random.Next() % 18 + 12)));
                         namesVehiclesList.Add("Велосипед");
                         bicyclesCount++;
                         break;
                     case 2:
-                        vehiclesList.Add(new Airplane(1, 11.4f));
+                        vehiclesList.Add(new Airplane((byte)(random.Next() % 21 + 3), (byte)(random.Next() % 3 + 1), (float)(random.Next() % 100 / 10 + 10)));
                         namesVehiclesList.Add("Самолёт");
                         airplanesCount++;
                         break;
@@ -86,30 +87,38 @@ namespace transport
             if (vehiclesList.Count == 0)
             {
                 Name_Label.Content = "Пусто `(*>﹏<*)′";
+                Info_Label.Content = "";
+                Image.Source = new BitmapImage(new Uri("", UriKind.Relative));
                 return;
             }
             
             var vehicles = vehiclesList[0];
            
             vehiclesList.RemoveAt(0);
+            namesVehiclesList.RemoveAt(0);
 
-            if (vehicles is Car)
+
+            switch (vehicles)
             {
-                Name_Label.Content = "Машина";
+                case Car:
+                    Name_Label.Content = "Машина";
+                    break;
+                case Bicycle:
+                    Name_Label.Content = "Велосипед";
+                    break;
+                case Airplane:
+                    Name_Label.Content = "Самолет";
+                    break;
             }
-            else if (vehicles is Bicycle)
-            {
-                Name_Label.Content = "Велосипед";
-            }
-            else if (vehicles is Airplane)
-            {
-                Name_Label.Content = "Самолет";
-            }
+
+            Info_Label.Content = vehicles.Info();
+            Image.Source = new BitmapImage(new Uri(vehicles.Image, UriKind.Relative));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             TakeVehicles();
+            ListView.Items.Refresh();
         }
     }
 }

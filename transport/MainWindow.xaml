@@ -5,15 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:transport"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="748">
+        Title="MainWindow" Height="400" Width="748">
     <Grid RenderTransformOrigin="0.494,0.499">
-        <Label x:Name="Info_Label" Content="Label" HorizontalAlignment="Left" Margin="467,54,0,0" VerticalAlignment="Top" Width="244" BorderBrush="Black" BorderThickness="2" Height="344"/>
         <Label x:Name="Count_Label" HorizontalAlignment="Left" Margin="29,23,0,0" VerticalAlignment="Top" Width="268" Height="48"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="348,88,0,0" VerticalAlignment="Top" Width="72" Height="40" Click="Button_Click"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="348,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.833,-1.562" Width="72"/>
-        <Button x:Name="Rewrite_Button" Content="Button" HorizontalAlignment="Left" Margin="348,217,0,0" VerticalAlignment="Top" Width="72" Height="61" Click="Rewrite_Button_Click"/>
-        <Label x:Name="Name_Label" Content="Label" HorizontalAlignment="Left" Margin="467,10,0,0" VerticalAlignment="Top" Width="244" Height="44"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="348,88,0,0" VerticalAlignment="Top" Width="72" Height="40" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/1614525788_57-p-strelka-na-belom-fone-63.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Взять" HorizontalAlignment="Left" Margin="348,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.833,-1.562" Width="72" FontFamily="Comic Sans MS" FontSize="20"/>
+        <Button x:Name="Rewrite_Button" Content="Button" HorizontalAlignment="Left" Margin="348,194,0,0" VerticalAlignment="Top" Width="72" Height="61" Click="Rewrite_Button_Click"/>
+        <Label x:Name="Name_Label" Content="" HorizontalAlignment="Left" Margin="467,10,0,0" VerticalAlignment="Top" Width="244" Height="44"/>
         <ListView x:Name="ListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="29,88,451,36">
         </ListView>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="458,46,28,36">
+            <Grid>
+                <Label x:Name="Info_Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="249" Height="145" Margin="1,0,0,0"/>
+                <Image x:Name="Image" HorizontalAlignment="Left" Height="160" Margin="0,48,0,0" VerticalAlignment="Bottom" Width="260" Stretch="Fill"/>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
