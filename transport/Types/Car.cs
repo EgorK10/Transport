@@ -12,6 +12,13 @@ namespace transport.Types
             { 4, "Легковая" }
         };
 
+        private readonly Dictionary<int, string> _imageCar = new()
+        {
+            { 1, "" },
+            { 2, "" },
+            { 3, "" },
+        };
+
         private readonly float _engineVolume;
 
         private readonly byte _numberDoors;
@@ -23,6 +30,8 @@ namespace transport.Types
             _type = _typeCar[type];
             _engineVolume = engineVolume;
             _numberDoors = numberDoors;
+
+            _image = _imageCar[type];
         }
     }
 }

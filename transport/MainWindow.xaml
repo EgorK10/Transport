@@ -5,7 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:transport"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="748">
+    <Grid RenderTransformOrigin="0.494,0.499">
+        <Label x:Name="Info_Label" Content="Label" HorizontalAlignment="Left" Margin="467,54,0,0" VerticalAlignment="Top" Width="244" BorderBrush="Black" BorderThickness="2" Height="344"/>
+        <Label x:Name="Count_Label" HorizontalAlignment="Left" Margin="29,23,0,0" VerticalAlignment="Top" Width="268" Height="48"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="348,88,0,0" VerticalAlignment="Top" Width="72" Height="40" Click="Button_Click"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="348,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.833,-1.562" Width="72"/>
+        <Button x:Name="Rewrite_Button" Content="Button" HorizontalAlignment="Left" Margin="348,217,0,0" VerticalAlignment="Top" Width="72" Height="61" Click="Rewrite_Button_Click"/>
+        <Label x:Name="Name_Label" Content="Label" HorizontalAlignment="Left" Margin="467,10,0,0" VerticalAlignment="Top" Width="244" Height="44"/>
+        <ListView x:Name="ListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="29,88,451,36">
+        </ListView>
     </Grid>
 </Window>

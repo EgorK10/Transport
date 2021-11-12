@@ -11,6 +11,13 @@ namespace transport.Types
             { 3, "Детский" }
         };
 
+        private readonly Dictionary<int, string> _imageBicycle = new()
+        {
+            { 1, "" },
+            { 2, "" },
+            { 3, "" },
+        };
+
         private readonly byte _wheelRadius;
 
         private readonly string? _type;
@@ -19,6 +26,8 @@ namespace transport.Types
         {
             _type = _typeBicycle[type];
             _wheelRadius = wheelRadius;
+
+            _image = _imageBicycle[type];
         }
     }
 }

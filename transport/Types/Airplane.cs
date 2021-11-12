@@ -13,14 +13,23 @@ namespace transport.Types
             { 5, "Турбовентиляторный" }
         };
 
+        private readonly Dictionary<int, string> _imageAirplane = new()
+        {
+            { 1, "" },
+            { 2, "" },
+            { 3, "" },
+        };
+
         private readonly float _maxFlight;
 
         private readonly string? _type;
 
-        public Airplane(int type, byte maxFlight)
+        public Airplane(int type, float maxFlight)
         {
             _type = _typeAirplane[type];
             _maxFlight = maxFlight;
+
+            _image = _imageAirplane[type];
         }
     }
 }
