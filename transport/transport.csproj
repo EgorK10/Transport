@@ -20,6 +20,9 @@
     <None Remove="Pictures\Roket.jpg" />
     <None Remove="Pictures\SkyReact.jpg" />
     <None Remove="Pictures\TurboVent.jpg" />
+    <None Remove="rewrite.jpg" />
+    <None Remove="strelka.jpg" />
+    <None Remove="tool.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -57,6 +60,9 @@
     <Resource Include="Pictures\TurboVent.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="rewrite.jpg" />
+    <Resource Include="strelka.jpg" />
+    <Resource Include="tool.png" />
   </ItemGroup>
 
 </Project>

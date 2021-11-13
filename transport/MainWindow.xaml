@@ -5,22 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:transport"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="748">
-    <Grid RenderTransformOrigin="0.494,0.499">
-        <Label x:Name="Count_Label" HorizontalAlignment="Left" Margin="29,23,0,0" VerticalAlignment="Top" Width="268" Height="48"/>
-        <Button Content="" HorizontalAlignment="Left" Margin="348,88,0,0" VerticalAlignment="Top" Width="72" Height="40" Click="Button_Click">
+        Title="Транспортные средства" Height="400" Width="748" WindowStartupLocation="CenterScreen" Icon="/tool.png" ResizeMode="NoResize">
+    <Grid RenderTransformOrigin="0.494,0.499" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
+        <Label x:Name="Count_Label" HorizontalAlignment="Left" Margin="29,23,0,0" VerticalAlignment="Top" Width="268" Height="48" FontFamily="Comic Sans MS" BorderBrush="Black" BorderThickness="1,1,1,1"/>
+        <Button Content="" HorizontalAlignment="Center" Margin="0,86,0,0" VerticalAlignment="Top" Width="72" Height="40" Click="Button_Click" Cursor="Hand" BorderBrush="Black" BorderThickness="2,2,2,2">
             <Button.Background>
-                <ImageBrush ImageSource="/1614525788_57-p-strelka-na-belom-fone-63.png"/>
+                <ImageBrush ImageSource="/strelka.jpg"/>
             </Button.Background>
         </Button>
-        <Label Content="Взять" HorizontalAlignment="Left" Margin="348,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.833,-1.562" Width="72" FontFamily="Comic Sans MS" FontSize="20"/>
-        <Button x:Name="Rewrite_Button" Content="Button" HorizontalAlignment="Left" Margin="348,194,0,0" VerticalAlignment="Top" Width="72" Height="61" Click="Rewrite_Button_Click"/>
-        <Label x:Name="Name_Label" Content="" HorizontalAlignment="Left" Margin="467,10,0,0" VerticalAlignment="Top" Width="244" Height="44"/>
-        <ListView x:Name="ListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="29,88,451,36">
-        </ListView>
+        <Label Content="Взять" HorizontalAlignment="Center" Margin="0,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.833,-1.562" Width="72" FontFamily="Comic Sans MS" FontSize="20"/>
+        <Button x:Name="Rewrite_Button" Content="" HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Width="72" Height="61" Click="Rewrite_Button_Click" Cursor="Hand" BorderBrush="Black" BorderThickness="2,2,2,2">
+            <Button.Background>
+                <ImageBrush ImageSource="/rewrite.jpg"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Name_Label" Content="" HorizontalAlignment="Left" Margin="467,10,0,0" VerticalAlignment="Top" Width="244" Height="44" FontFamily="Comic Sans MS" FontSize="18"/>
+        <ListView x:Name="ListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="29,88,451,36" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="Black" BorderThickness="2,2,2,2"/>
         <Border BorderBrush="Black" BorderThickness="1" Margin="458,46,28,36">
-            <Grid>
-                <Label x:Name="Info_Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="249" Height="145" Margin="1,0,0,0"/>
+            <Grid Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Margin="2,2,2,2">
+                <Label x:Name="Info_Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="249" Height="145" Margin="1,0,0,0" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" FontFamily="Comic Sans MS" FontSize="14"/>
                 <Image x:Name="Image" HorizontalAlignment="Left" Height="160" Margin="0,48,0,0" VerticalAlignment="Bottom" Width="260" Stretch="Fill"/>
             </Grid>
         </Border>
